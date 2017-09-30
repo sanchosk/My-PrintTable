@@ -1,0 +1,5 @@
+Sources for kuro's geared bowden extruder (mk7/mk8, 1.75/3mm, instant locker, gear cleaning brush)
+
+Kuro´s Compact Extruder for the Diamond Hotend (http://www.thingiverse.com/thing:993588)
+AJGW Alain-Jonas-Greg-Wade's Extruder (http://www.thingiverse.com/thing:40642)
+Kuro's Compact Bowden Geared Extruder (http://www.thingiverse.com/thing:364734)
