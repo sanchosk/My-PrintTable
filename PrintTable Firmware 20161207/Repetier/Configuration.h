@@ -56,6 +56,14 @@
 #define FAN_THERMO_THERMISTOR_PIN -1
 #define FAN_THERMO_THERMISTOR_TYPE 1
 
+// redefine stepper socket - Z to EXT and EXT to Z
+#undef Z_STEP_PIN
+#define Z_STEP_PIN ORIG_E0_STEP_PIN
+#undef Z_DIR_PIN
+#define Z_DIR_PIN ORIG_E0_DIR_PIN
+#undef Z_ENABLE_PIN
+#define Z_ENABLE_PIN ORIG_E0_ENABLE_PIN
+
 //#define EXTERNALSERIAL  use Arduino serial library instead of build in. Requires more ram, has only 63 byte input buffer.
 // Uncomment the following line if you are using Arduino compatible firmware made for Arduino version earlier then 1.0
 // If it is incompatible you will get compiler errors about write functions not being compatible!
@@ -87,16 +95,16 @@
 #define EXT0_TEMPSENSOR_TYPE 14
 #define EXT0_TEMPSENSOR_PIN TEMP_0_PIN
 #define EXT0_HEATER_PIN HEATER_0_PIN
-#define EXT0_STEP_PIN ORIG_E0_STEP_PIN
-#define EXT0_DIR_PIN ORIG_E0_DIR_PIN
+#define EXT0_STEP_PIN ORIG_Z_STEP_PIN
+#define EXT0_DIR_PIN ORIG_Z_DIR_PIN
 #define EXT0_INVERSE 0
-#define EXT0_ENABLE_PIN ORIG_E0_ENABLE_PIN
+#define EXT0_ENABLE_PIN ORIG_Z_ENABLE_PIN
 #define EXT0_ENABLE_ON 0
 #define EXT0_MIRROR_STEPPER 0
-#define EXT0_STEP2_PIN ORIG_E0_STEP_PIN
-#define EXT0_DIR2_PIN ORIG_E0_DIR_PIN
+#define EXT0_STEP2_PIN ORIG_Z_STEP_PIN
+#define EXT0_DIR2_PIN ORIG_Z_DIR_PIN
 #define EXT0_INVERSE2 0
-#define EXT0_ENABLE2_PIN ORIG_E0_ENABLE_PIN
+#define EXT0_ENABLE2_PIN ORIG_Z_ENABLE_PIN
 #define EXT0_MAX_FEEDRATE 80
 #define EXT0_MAX_START_FEEDRATE 20
 #define EXT0_MAX_ACCELERATION 2000
@@ -246,7 +254,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define MIN_HARDWARE_ENDSTOP_Z true
 #define ENDSTOP_PULLUP_X_MAX true
 #define ENDSTOP_X_MAX_INVERTING true
-#define MAX_HARDWARE_ENDSTOP_X true
+#define MAX_HARDWARE_ENDSTOP_X false
 #define ENDSTOP_PULLUP_Y_MAX true
 #define ENDSTOP_Y_MAX_INVERTING false
 #define MAX_HARDWARE_ENDSTOP_Y false
